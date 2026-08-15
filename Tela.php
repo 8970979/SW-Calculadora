@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
 </head>
 <body>
-    <form method="post" action="index.php">
+    <form method="post" action="executar.php">
   <input type="number" name="valor1" required><br>
-  <input type="number" name="valor2" required><br><br>
-  <button name="operacao" value="somar">Somar</button>
-  <button name="operacao" value="subtrair">Subtrair</button>
-  <button name="operacao" value="multiplicar">Multiplicar</button>
-  <button name="operacao" value="dividir">Dividir</button>
-  <button name="operacao" value="exponenciar">Exponenciar</button>
+  <input type="number" name="valor2" required>
+  
+  <br><br>
+
+<select name="operacao">
+            <option value="somar">Somar</option>
+            <option value="subtrair">Subtrair</option>
+            <option value="multiplicar">Multiplicar</option>
+            <option value="dividir">Dividir</option>
+            <option value="exponenciar">Exponenciar</option>
+        </select>
+        <button type="submit">Calcular</button>
 </form>
 
 </body>
