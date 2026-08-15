@@ -2,8 +2,6 @@
 require_once 'Operacao.php';
 
 
-if (isset($_POST['operacao'])) {
-
     $valor1 = $_POST['valor1'];
     $valor2 = $_POST['valor2'];
     $operacao = $_POST['operacao'];
@@ -24,6 +22,4 @@ if (isset($_POST['operacao'])) {
         $resultado = $calculadora->exponenciar();
     }
 }
-
-require_once 'Tela.php';
 ?>
