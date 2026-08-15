@@ -5,22 +5,26 @@ $op1 = new Operacao();
 
 $op1->setValor1($_POST['valor1']);
 $op1->setValor2($_POST['valor2']);
-$operacao = ($_POST['operacao']);
+$operacao = $_POST['operacao'];
 
 if ($operacao == 'somar') {
-    $op1->somar();
-
+    $resultado = $op1->somar();
+    $nome = "Soma";
 } else if ($operacao == 'subtrair') {
-    $op1->subtrair();
-
+    $resultado = $op1->subtrair();
+    $nome = "Subtração";
 } else if ($operacao == 'multiplicar') {
-    $op1->multiplicar();
-
+    $resultado = $op1->multiplicar();
+    $nome = "Multiplicação";
 } else if ($operacao == 'dividir') {
-    $op1->dividir();
-
+    $resultado = $op1->dividir();
+    $nome = "Divisão";
 } else if($operacao == 'exponenciar') {
-    $op1->exponenciar();
+    $resultado = $op1->exponenciar();
+    $nome = "Exponenciação";
 }
 
+echo "Valor1: " . $op1->getValor1() . "<br>";
+echo "Valor2: " . $op1->getValor2() . "<br><br>";
+echo "$nome: $resultado";
 ?>
